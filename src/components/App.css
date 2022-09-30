@@ -1,0 +1,94 @@
+.App {
+  text-align: center;
+  padding: 1em 2em;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.TileContainer {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.Tile {
+  width: 120px;
+  height: 120px;
+  border-width: 5px;
+  border-color: lightslategrey;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  gap: 0.5em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  flex: 1;
+}
+
+.Header {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  padding: 2em;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.Controls {
+  display: flex;
+  gap: 0.5em;
+}
+
+.Control {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: lightgray;
+  border-radius: 0.5em;
+  padding: 0.2em 1.5em;
+  transition: all 200ms ease-in-out;
+}
+
+.Control:hover {
+  background-color: rgb(229, 229, 229);
+}
+
+.Footer {
+  display: flex;
+  gap: 0.5em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  padding: 5em;
+  justify-content: space-between;
+  border: 2px solid lightgray;
+  border-radius: 1em;
+}
+
+div em {
+  text-decoration: underline;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(1.3);
+  }
+
+  to {
+    transform: scale(1.0);
+  }
+}
+
+.tile-enter-active {
+  animation: pop 300ms ease-in-out;
+}
+
+.tile-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
