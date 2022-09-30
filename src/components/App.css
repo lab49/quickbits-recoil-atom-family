@@ -16,8 +16,8 @@
 }
 
 .Tile {
-  width: 120px;
-  height: 120px;
+  width: 8em;
+  height: 8em;
   border-width: 5px;
   border-color: lightslategrey;
   background-color: lightgray;
@@ -64,7 +64,7 @@
   gap: 0.5em;
   flex-shrink: 0;
   flex-grow: 0;
-  padding: 5em;
+  padding: 3em;
   justify-content: space-between;
   border: 2px solid lightgray;
   border-radius: 1em;
