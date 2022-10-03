@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
   padding: 1em 2em;
   width: 100%;
   min-height: 100vh;
@@ -53,6 +53,7 @@
 .Controls {
   display: flex;
   gap: 0.5em;
+  min-width: 180px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -102,6 +103,10 @@
   .App {
     padding: 1em 0.2em;
   }
+
+  .Title {
+    text-align: center;
+  }
 }
 
 .Control {
@@ -141,10 +146,13 @@ div em {
 }
 
 .Title {
-  text-align: left;
+  /* text-align: left; */
 }
 
-
+.Empty {
+  margin-top: 2em;
+  font-size: 2em;
+}
 
 @keyframes pop {
   from {
