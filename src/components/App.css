@@ -7,7 +7,7 @@
 
 .TileContainer {
   display: flex;
-  gap: 5px;
+  gap: 0.5em;
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
@@ -16,7 +16,8 @@
 .Tile {
   width: 8em;
   height: 8em;
-  border-width: 5px;
+  border-style: solid;
+  border-width: 1px;
   border-color: lightslategrey;
   background-color: lightgray;
   display: flex;
@@ -25,7 +26,14 @@
   gap: 0.5em;
   border-radius: 0.5em;
   cursor: pointer;
-  flex: 1;
+}
+
+.Pair {
+  font-size: 1em;
+}
+
+.Tile div {
+  font-size: 0.9em;
 }
 
 .Header {
@@ -60,6 +68,7 @@
 @media only screen and (max-width: 500px) {
   .Controls {
     flex-direction: column;
+    align-items: center;
   }
 
   .Info {
@@ -72,8 +81,26 @@
 
   .Header {
     flex-direction: column;
-    padding: 1em;
+    padding: 0.5em;
     border: none;
+  }
+
+  .Tile {
+    width: 80px;
+    height: 80px;
+    padding: 0.3em;
+  }
+
+  .Tile div {
+    font-size: 0.5em;
+  }
+
+  .Pair {
+    font-size: 0.7em;
+  }
+
+  .App {
+    padding: 1em 0.2em;
   }
 }
 
@@ -116,6 +143,8 @@ div em {
 .Title {
   text-align: left;
 }
+
+
 
 @keyframes pop {
   from {

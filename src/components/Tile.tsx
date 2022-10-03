@@ -10,7 +10,6 @@ interface TileProps {
 const Tile: FC<TileProps> = ({ id }) => {
     const { value, setAsSelected, selected } = useTile(id)
     const renderCount = useRef(0)
-    const ref = useRef(null)
 
     const style = useMemo((): CSSProperties =>
         selected ?
@@ -26,12 +25,11 @@ const Tile: FC<TileProps> = ({ id }) => {
     return (
 
         <div
-            ref={ref}
             onClick={setAsSelected}
             style={style}
             className='Tile'
         >
-            <h3>{id}</h3>
+            <h3 className='Pair'>{id}</h3>
             <div>{value}</div>
             <div>Renders:</div>
             <div>{renderCount.current}</div>
