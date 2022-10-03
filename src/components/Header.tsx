@@ -7,13 +7,15 @@ const Header = () => {
     const selectedTileId = useRecoilValue(store.selectedId)
 
     return (
-        <div className="Header">
-            <h1>Quickbits Atom Family</h1>
-
-            <h5># of Tiles: <em>{tileIds.length}</em></h5>
-            <h5>Selected Pair: <em>{selectedTileId}</em></h5>
-
-            <Controls />
+        <div>
+            <h1 className="Title">Quickbits Atom Family</h1>
+            <div className="Header">
+                <div className='Info'>
+                    <div className="Count"># of Tiles: {tileIds.length}</div>
+                    <div className="Selection">Selected Pair: {selectedTileId}</div>
+                </div>
+                <Controls />
+            </div>
         </div>
     )
 }
