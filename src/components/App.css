@@ -55,14 +55,9 @@
   .Info {
     flex-direction: column;
   }
-
-  /* .Header {
-    flex-direction: column;
-    padding: 1em;
-  } */
 }
 
-@media only screen and (max-width: 500) {
+@media only screen and (max-width: 500px) {
   .Controls {
     flex-direction: column;
   }
@@ -71,9 +66,14 @@
     flex-direction: column;
   }
 
+  .Info div {
+    font-size: 1em;
+  }
+
   .Header {
     flex-direction: column;
     padding: 1em;
+    border: none;
   }
 }
 
