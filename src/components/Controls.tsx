@@ -1,10 +1,13 @@
 import useTiles from "hooks/useTiles";
 import { useState, useCallback, ChangeEvent } from "react";
+import { useSetRecoilState } from "recoil";
 import useFaker from "hooks/useFaker";
+import store from "store";
 
 const Controls = () => {
     const [tileCount, setTileCount] = useState(0)
-    const [tickRate, setTickRate] = useState(50) // ms
+    const [tickRate, setTickRate] = useState(50)
+    const setUpdateHighlights = useSetRecoilState(store.updateHighlights)
     useTiles(tileCount)
     useFaker(tickRate)
 
@@ -18,8 +21,19 @@ const Controls = () => {
         setTickRate(parseInt(value))
     }, [setTickRate])
 
+    const handleHighlightsCheckbox = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+        setUpdateHighlights(prev => !prev)
+    }, [setUpdateHighlights])
+
     return (
         <div className="Controls">
+            <div className="Control">
+                <div>Update Highlights</div>
+                <input
+                    type='checkbox'
+                    onChange={handleHighlightsCheckbox}
+                />
+            </div>
             <div className="Control">
                 <div>Tile Count</div>
                 <input

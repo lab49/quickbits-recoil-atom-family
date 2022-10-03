@@ -15,8 +15,14 @@ const selectedId = atom<string>({
     default: ''
 })
 
+const updateHighlights = atom<boolean>({
+    key: 'UpdateHighlights',
+    default: false
+})
+
 export default {
     tiles,
     tileIds,
-    selectedId
+    selectedId,
+    updateHighlights
 }
