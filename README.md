@@ -11,7 +11,7 @@ Often in financial applications we have many pieces of independent data that nee
 
 ![Screen Shot 2022-10-04 at 9 39 33 AM](https://user-images.githubusercontent.com/97474840/196573558-6ea46ab7-96e4-4483-826b-7d1112edcdc8.png)
 
-### [View the live demo!](https://quickbits-react-ag-grid-speed-demo.vercel.app/)
+### [View the live demo!](https://quickbits-recoil-atom-family.vercel.app/)
 
 ## Developers guide
 
